@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#32302e",
+              "surface-container-low": "#f8f3ef",
+              "surface-container-highest": "#e6e2de",
+              "secondary-fixed-dim": "#f1b6ce",
+              "background": "#fdf8f4",
+              "on-secondary-container": "#7c4e62",
+              "on-background": "#1d1b19",
+              "on-error-container": "#93000a",
+              "surface-tint": "#974358",
+              "secondary": "#7f5165",
+              "on-tertiary-fixed": "#251720",
+              "primary": "#843549",
+              "inverse-on-surface": "#f5f0ec",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#544245",
+              "primary-fixed": "#ffd9df",
+              "secondary-container": "#ffc4dc",
+              "surface-container": "#f2ede9",
+              "on-tertiary-fixed-variant": "#53424c",
+              "on-surface": "#1d1b19",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#ded9d5",
+              "surface-container-high": "#ece7e3",
+              "on-tertiary-container": "#f9e0ec",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#f5dce8",
+              "on-primary-fixed-variant": "#792c41",
+              "surface-variant": "#e6e2de",
+              "primary-fixed-dim": "#ffb1c0",
+              "secondary-fixed": "#ffd8e6",
+              "primary-container": "#a24c61",
+              "on-secondary-fixed-variant": "#64394d",
+              "tertiary": "#5c4a54",
+              "outline-variant": "#d9c1c4",
+              "outline": "#867275",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#ffe0e4",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#d8c0cc",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#320f21",
+              "surface-bright": "#fdf8f4",
+              "surface": "#fdf8f4",
+              "tertiary-container": "#75626c",
+              "inverse-primary": "#ffb1c0",
+              "on-primary-fixed": "#3f0017"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .scale-98-on-click:active { transform: scale(0.98); }
+        .no-border-tonal-shift-via-glassmorphism { border: none !important; }
+        .glass-card { backdrop-filter: blur(24px); }
+        .italic-accent {
+            font-family: 'Newsreader', serif;
+            font-style: italic;
+            font-weight: 400;
+            position: relative;
+            display: inline-block;
+        }
+        .italic-accent::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            width: 100%;
+            height: 0.15em;
+            background-color: #ffd9df;
+            z-index: -1;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar (Synchronized with SCREEN_62) -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-6 bg-[#fdf8f4]/60 backdrop-blur-xl z-50">
+<div class="text-2xl font-bold font-headline text-primary tracking-tight" style="">Miyeong (Aerin) Yun</div>
+<div class="hidden md:flex gap-10 items-center"><a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="#" style="">About</a>
+<a class="font-body text-sm uppercase tracking-widest text-primary border-b-2 border-primary/20 pb-1" href="#" style="">Work</a>
+<a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="#" style="">Insights</a>
+<button class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all" style="">Contact</button></div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-[1920px] mx-auto min-h-screen">
+<!-- Hero Section -->
+<header class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-20">
+<div class="md:col-span-8">
+<span class="font-label text-primary uppercase tracking-[0.3em] text-sm mb-4 block italic" style="">work</span>
+<h1 class="font-headline text-6xl md:text-[5.5rem] text-primary leading-[1.05] tracking-tight" style="">
+                    Projects built to drive action, not just <span class="italic underline decoration-secondary-fixed" style="">attention.</span>
+</h1>
+<p class="mt-12 font-body text-lg text-on-surface-variant max-w-xl leading-relaxed opacity-80" style="">
+                    A collection of strategic marketing initiatives where data-driven insights meet editorial storytelling. Specializing in CRM, digital content, and brand elevation.
+                </p>
+</div>
+<div class="md:col-span-4 flex flex-col items-end text-right pb-4">
+<div class="space-y-1">
+<p class="font-headline text-3xl text-on-surface" style="">Miyeong (Aerin) Yun</p>
+<p class="font-label text-primary/60 text-[10px] uppercase tracking-[0.15em] font-bold" style="">CONTENT &amp; GROWTH MARKETING SPECIALIST</p>
+</div>
+</div>
+</header>
+<!-- Featured Project -->
+<section class="mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 group">
+<div class="relative overflow-hidden rounded-xl aspect-[16/9] bg-surface-container mb-8">
+<img alt="Valentine Campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxurious velvet red background with soft cinematic lighting, featuring elegant gift boxes and silk ribbons in a high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp8y_WhKLYqDsLKiYmPxTojqEwXcmzRLZc1HzxlFHHDc0eghBqpNmN0umq0JPS7J2MU5LClBkfWIPeWw2c6sLw_9K91BqobR1AcJhGi6nd9vxsYmae9Gv_eIVLC6vlsV8EHkWbz_JfT7xlV709I1yROP0XZLmX4NO1sDNEek-6MZjX8OCr3cUBe2IxNGj-syjwRkzL41s7flVKgjdK00y5XwNjk-kygKiYMaf-SD3rdLH4fPxDQKpOh6l1Z4ub_D-nGzGiuW-7zYPZ" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+<div class="flex flex-wrap gap-3 mb-6">
+<span class="px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-label uppercase tracking-wider" style="">Campaign</span>
+<span class="px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-label uppercase tracking-wider" style="">CRM</span>
+<span class="px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-label uppercase tracking-wider" style="">Content</span>
+</div>
+<h2 class="font-headline text-5xl text-primary mb-4 italic" style="">Valentine Campaign</h2>
+<p class="font-body text-lg text-on-surface-variant mb-8 max-w-2xl" style="">
+                        Built a connected campaign where Instagram generated qualified traffic and CRM converted that seasonal attention into measurable revenue.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="p-6 bg-surface-container-low rounded-xl border-none">
+<p class="font-label text-xs uppercase text-on-surface-variant mb-2" style="">Instagram Link Clicks</p>
+<p class="font-headline text-3xl text-primary" style="">2,327</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border-none">
+<p class="font-label text-xs uppercase text-on-surface-variant mb-2" style="">Email Revenue</p>
+<p class="font-headline text-3xl text-primary" style="">CA$70K+</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border-none col-span-2 md:col-span-1">
+<p class="font-label text-xs uppercase text-on-surface-variant mb-2" style="">Primary Role</p>
+<p class="font-body text-primary font-headline text-3xl" style="">Content · CRM · Paid Support</p>
+</div>
+</div><button class="w-full mt-6 py-3 border border-primary text-primary font-headline italic rounded-full hover:bg-primary hover:text-on-primary transition-colors duration-300" style="">View Case Study</button>
+</div>
+<div class="lg:col-span-4">
+<div class="bg-primary text-on-primary p-10 rounded-xl h-full flex flex-col justify-center">
+<span class="material-symbols-outlined text-secondary-fixed text-5xl mb-6" style="">auto_awesome</span>
+<h3 class="font-headline text-3xl mb-6 italic" style="">Why This Project Matters</h3>
+<p class="font-body text-lg leading-relaxed opacity-90" style="">
+                            This project demonstrates that traffic alone does not drive revenue. By connecting Instagram acquisition with CRM conversion, the campaign created a full-funnel structure that turned clicks into measurable business impact.</p>
+<div class="mt-8 pt-8 border-t border-white/20">
+<p class="font-label text-xs uppercase tracking-widest opacity-70" style="">Strategic Core</p>
+<p class="font-headline text-xl mt-2 italic" style="">Acquisition × Conversion × Revenue</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="mb-32">
+<h3 class="font-headline text-4xl text-primary mb-12 italic" style="">Additional Impact Cases</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Card 1 -->
+<div class="group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container mb-6">
+<img alt="Koreanshop Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Top down view of colorful Korean gourmet food products arranged neatly on a warm cream surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXgQWpBSH9NTMeY4gsfn9-8VCQAHVQEJvaw1wpGyImS5AQKPDMEeq1yzbgq1N9UhbcwhcRip4wnG5oqkBMRe4IlYxYbNoWCArjaO6wd7xTnqrWG_VB6BpwkdM7g1XLNbj71B_QSpcNQXiGjpbEGpw_iP98I9yAaqj9bvOCmzgc45-UNTO6Aab1NV1Yk2_h6EhFHOcIdXA_Nd0h9K5KXzDxhMA4DtjlPf7b4XEwCKil_VMJifME8zNHtKtKJixoALL8ZZ0qKvwxeyvu" style=""/>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">CRM</span>
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">Content Strategy</span>
+</div>
+<h4 class="font-headline text-2xl text-primary mb-2" style="">Koreanshop Content &amp; CRM</h4>
+<p class="font-body text-on-surface-variant text-sm mb-6" style="">Produced Instagram &amp; TikTok content and supported CRM campaigns to drive engagement.</p>
+<div class="justify-between items-center pt-4 border-t border-surface-container-highest"><div class="w-full space-y-4">
+<div class="flex justify-between items-center">
+<div class="text-xs font-label text-on-surface-variant" style="">Role: <span class="font-bold" style="">Content &amp; CRM Execution</span></div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-headline italic rounded-full hover:bg-primary hover:text-on-primary transition-colors duration-300" style=""><span class="" style="color: rgb(132, 53, 73); background-color: rgb(253, 248, 244);">View Case Study</span></button>
+</div></div>
+</div>
+<!-- Card 2 -->
+<div class="group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container mb-6">
+<img alt="BAPBO Rebranding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist brand identity design mockup showing logo on business cards and stationary with a sophisticated pink and deep red color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAagJlEAUC8jIx8qOZNX4ij0Dlb2C-SVftppflwMApX4HC-zyD7LMS1iRjpVC6x9iZYPjroILbBAKzKzehQjlIRbKBBT7i9G8h_AhBle17d3bBeajh1NbsnxMFiRisf6IYUXQsZEMn6Mylm83LbJQaqHU7LwyPbpFaqoYFeeMelFtmaviiQlIrfAW9LpfPD5QvlGJqCJ336s4a9DLngijixvmtr8cLPgDybcgKqEgUnfkNyTYY-9A75xJJezqAUI7FsxsUhuc_JyCCb" style=""/>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">Rebranding</span>
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">Visual ID</span>
+</div>
+<h4 class="font-headline text-2xl text-primary mb-2" style="">BAPBO Rebranding</h4>
+<p class="font-body text-on-surface-variant text-sm mb-6" style="">Developed and applied a localized visual identity across in-store design and social content.</p>
+<div class="justify-between items-center pt-4 border-t border-surface-container-highest"><div class="w-full space-y-4">
+<div class="flex justify-between items-center">
+<div class="text-xs font-label text-on-surface-variant" style="">Role: <span class="font-bold" style="">Branding &amp; Visual Design</span></div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-headline italic rounded-full hover:bg-primary hover:text-on-primary transition-colors duration-300" style=""><span class="" style="color: rgb(132, 53, 73); background-color: rgb(253, 248, 244);">View Case Study</span></button>
+</div></div>
+</div>
+<!-- Card 3 -->
+<div class="group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container mb-6">
+<img alt="Twelve Food Truck" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Stylized night photo of a modern food truck with neon lights reflecting on wet pavement in a trendy urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCO3_kNo_rLWrP-xwDWD_SrIPAEsVkbVwrQXKmb6IYUrVyIKay3dOp3QZqjUvi1sPFqEI-JF6ygdzD0Up6ze8F3xAjE_8CtX8VzY9_7gh0rsIg8xB3U0pK8YssbI158mrc_-STmIqmcmGYXku3Zl02L3EX31-hVaHc54QKQzKzno35UHOO7eS9So2rSx_GeYJfFOxfMwtS6cnWxipHFfQ3fs2M3bHN9yMmvXAW1SsdiH2z2XTUm0F6Zs9Esuhyrzj0s4gAVpoljRzX" style=""/>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">Launch</span>
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">Social Media</span>
+</div>
+<h4 class="font-headline text-2xl text-primary mb-2" style="">Twelve Food Truck Launch</h4>
+<p class="font-body text-on-surface-variant text-sm mb-6" style="">Supported launch marketing through social content, visual design, and on-site materials.</p>
+<div class="justify-between items-center pt-4 border-t border-surface-container-highest"><div class="w-full space-y-4">
+<div class="flex justify-between items-center">
+<div class="text-xs font-label text-on-surface-variant" style="">Role: <span class="font-bold" style="">Content &amp; Visual Design</span></div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-headline italic rounded-full hover:bg-primary hover:text-on-primary transition-colors duration-300" style=""><span class="" style="color: rgb(132, 53, 73); background-color: rgb(253, 248, 244);">View Case Study</span></button>
+</div></div>
+</div>
+<!-- Card 4: Broadcast Content Experience -->
+<div class="group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container mb-6 relative">
+<div class="absolute inset-0 bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/20 text-8xl" style='font-variation-settings: "FILL" 1;'>live_tv</span>
+</div>
+<img alt="Broadcast Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80" data-alt="Cinematic studio environment with professional monitor screens displaying text and editing timelines in a dark, atmospheric setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBlk68MPaFrRlqZi6-vIH_NgTeE0FW_hFr6UACPCiWC0r8yuEVBhOeGCIHbYV1lkSFIRWYvj4ldAwp6otPE58fHEoX3GRzHl3mi92ok05BHx6p3l8LabjG8FVthqjALMLDtBfyUewY8Y7Ggp_ytnDHUysvJtN13TlMidgXFuuTRYhn9qzJI87w0lBOyaH2mdIOjBghA_AmeqqL9_urrd7zhs5CsuVrSmsMntdAyo2oeYPf5dlMMdaOmllwgqQ_hl9Bo-NPHQEhNDJH" style=""/>
+</div>
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">Content</span>
+<span class="px-3 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase rounded-full" style="">Motion Graphics</span>
+</div>
+<h4 class="font-headline text-2xl text-primary mb-2" style="">Broadcast Content Experience</h4>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed" style="">10 years of experience in high-speed content production and visual storytelling.</p>
+<div class="space-y-4 pt-4 border-t border-surface-container-highest">
+<div class="text-xs font-label text-on-surface-variant" style="">Role: <span class="font-bold" style="">Real-time content production, motion graphics, visual storytelling</span></div>
+<button class="w-full py-3 border border-primary text-primary font-headline italic rounded-full hover:bg-primary hover:text-on-primary transition-colors duration-300" style=""><span class="" style="color: rgb(132, 53, 73); background-color: rgb(253, 248, 244);">View Case Study</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mb-32 text-center py-24 bg-[#f2ede9] rounded-[32px] relative overflow-hidden">
+<div class="absolute -top-12 -left-12 opacity-10">
+<span class="material-symbols-outlined text-9xl text-primary" style='font-variation-settings: "FILL" 1;'>edit_square</span>
+</div>
+<div class="relative z-10 px-8">
+<h2 class="font-headline text-4xl md:text-5xl text-primary mb-6 italic leading-tight" style="">If you’re looking for a marketer who can turn content into revenue, let’s talk.</h2>
+<p class="font-body text-on-surface-variant max-w-xl mx-auto mb-10 text-lg leading-relaxed" style="">
+                    Every metric has a story. I’m happy to walk you through the data architectures and creative processes that made these numbers possible.
+                </p>
+<button class="bg-[#843549] text-on-primary px-10 py-5 rounded-[32px] font-headline text-xl italic hover:opacity-90 transition-colors scale-98-on-click" style="">
+                    Request Full Case Studies
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer (Synchronized with SCREEN_62) -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 bg-surface-container rounded-t-xl mt-12">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline italic text-lg text-primary" style="">Miyeong (Aerin) Yun</span>
+<span class="font-body text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60" style="">© 2026 MIYEONG YUN. ALL RIGHTS RESERVED.</span>
+</div>
+<div class="flex flex-col items-center gap-4">
+<span class="font-headline text-xl text-primary" style="">Content • CRM • Campaign Strategy</span>
+<div class="flex gap-8">
+<a class="font-body text-xs uppercase tracking-widest text-primary hover:opacity-70 transition-opacity" href="#" style="">LinkedIn</a>
+<a class="font-body text-xs uppercase tracking-widest text-primary hover:opacity-70 transition-opacity" href="#" style="">Instagram</a>
+<a class="font-body text-xs uppercase tracking-widest text-primary hover:opacity-70 transition-opacity" href="#" style="">Email</a>
+<a class="font-body text-xs uppercase tracking-widest text-primary hover:opacity-70 transition-opacity" href="#" style="">Resume</a>
+</div>
+</div>
+</footer>
+</body></html>
