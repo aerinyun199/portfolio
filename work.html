@@ -100,15 +100,46 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- TopNavBar (Synchronized with SCREEN_62) -->
-<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-6 bg-[#fdf8f4]/60 backdrop-blur-xl z-50">
-<a href="index.html" class="text-2xl font-bold font-headline text-primary tracking-tight">Miyeong (Aerin) Yun</a>
-<div class="hidden md:flex gap-10 items-center"><a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="index.html" style="">About</a>
-<a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="insights.html" style="">insights</a>
-<a class="font-body text-sm uppercase tracking-widest text-primary border-b-2 border-primary/20 pb-1" href="work.html" style="">Work</a>
-<a href="contact.html"
-   class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all">
-  Contact
-</a></div>
+<nav class="fixed top-0 w-full bg-[#fdf8f4]/60 backdrop-blur-xl z-50">
+  <div class="flex justify-between items-center px-8 py-6">
+    <a href="index.html" class="text-2xl font-bold font-headline text-primary tracking-tight">
+      Miyeong (Aerin) Yun
+    </a>
+
+    <!-- Desktop Menu: 기존 위치/디자인 유지 -->
+    <div class="hidden md:flex gap-10 items-center">
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="index.html">About</a>
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="insights.html">insights</a>
+      <a class="font-body text-sm uppercase tracking-widest text-primary border-b-2 border-primary/20 pb-1" href="work.html">Work</a>
+      <a href="contact.html"
+         class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Contact
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="md:hidden text-primary p-2"
+      onclick="toggleMenu()"
+      aria-label="Toggle menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-8 pb-6">
+    <div class="flex flex-col gap-4 pt-2 bg-[#fdf8f4]/95 backdrop-blur-xl">
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300 border-b border-primary/10 pb-3" href="index.html">About</a>
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300 border-b border-primary/10 pb-3" href="insights.html">insights</a>
+      <a class="font-body text-sm uppercase tracking-widest text-primary border-b border-primary/10 pb-3" href="work.html">Work</a>
+      <a href="contact.html"
+         class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all text-center mt-2">
+        Contact
+      </a>
+    </div>
+  </div>
 </nav>
 <main class="pt-32 pb-24 px-8 max-w-[1920px] mx-auto min-h-screen">
 <!-- Hero Section -->
@@ -279,7 +310,7 @@
 </section>
 </main>
 <!-- Footer (Synchronized with SCREEN_62) -->
-<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 bg-surface-container rounded-t-xl mt-12">
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 bg-[#f2ede9] rounded-t-xl mt-12">
 <div class="flex flex-col items-center md:items-start gap-2">
 <span class="font-headline italic text-lg text-primary" style="">Miyeong (Aerin) Yun</span>
 <span class="font-body text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60" style="">© 2026 MIYEONG YUN. ALL RIGHTS RESERVED.</span>
@@ -294,4 +325,21 @@
 </div>
 </div>
 </footer>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const button = document.querySelector('[aria-controls="mobile-menu"]');
+    const isHidden = menu.classList.contains('hidden');
+
+    menu.classList.toggle('hidden');
+    button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+  }
+
+  function closeMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const button = document.querySelector('[aria-controls="mobile-menu"]');
+    menu.classList.add('hidden');
+    button.setAttribute('aria-expanded', 'false');
+  }
+</script>
 </body></html>

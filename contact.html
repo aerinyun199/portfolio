@@ -89,99 +89,137 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
 <!-- TopAppBar (Synced from About Screen) -->
-<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-6 bg-[#fdf8f4]/60 backdrop-blur-xl z-50">
-<a href="index.html" class="text-2xl font-bold font-headline text-primary tracking-tight">Miyeong (Aerin) Yun</a>
-<div class="hidden md:flex gap-10 items-center"><a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="index.html" style="">About</a>
-<a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="insights.html" style="">insights</a>
-<a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="work.html" style="">Work</a>
-<a href="contact.html"
-   class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all">
-  Contact
-</a></div>
+<nav class="fixed top-0 w-full bg-[#fdf8f4]/60 backdrop-blur-xl z-50">
+  <div class="flex justify-between items-center px-8 py-6">
+    <a href="index.html" class="text-2xl font-bold font-headline text-primary tracking-tight">
+      Miyeong (Aerin) Yun
+    </a>
+
+    <!-- Desktop Menu: 기존 위치/디자인 유지 -->
+    <div class="hidden md:flex gap-10 items-center">
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="index.html">About</a>
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="insights.html">insights</a>
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300" href="work.html">Work</a>
+      <a href="contact.html"
+         class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all">
+        Contact
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="md:hidden text-primary p-2"
+      onclick="toggleMenu()"
+      aria-label="Toggle menu"
+      aria-controls="mobile-menu"
+      aria-expanded="false">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-8 pb-6">
+    <div class="flex flex-col gap-4 pt-2 bg-[#fdf8f4]/95 backdrop-blur-xl">
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300 border-b border-primary/10 pb-3" href="index.html">About</a>
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300 border-b border-primary/10 pb-3" href="insights.html">insights</a>
+      <a class="font-body text-sm uppercase tracking-widest text-on-surface-variant/70 hover:text-primary transition-colors duration-300 border-b border-primary/10 pb-3" href="work.html">Work</a>
+      <a href="contact.html"
+         class="bg-primary text-on-primary px-8 py-2.5 rounded-full font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all text-center mt-2">
+        Contact
+      </a>
+    </div>
+  </div>
 </nav>
 <!-- Alignment Main Container (Matches About Screen padding and max-width) -->
 <main class="pb-24 px-8 max-w-[1920px] mx-auto min-h-screen pt-32">
 <!-- Hero Section (Aligned to match About Screen header position exactly) -->
 <section class="mb-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-<div class="md:col-span-8">
-<span class="font-label text-primary uppercase tracking-[0.3em] text-sm mb-4 block italic" style="">CONTACT</span>
-<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.1] tracking-tight max-w-5xl relative" style="">
-                    Let’s <span class="italic underline decoration-secondary-fixed" style="">Connect.</span>
-<!-- Hand-drawn sparkle accent preserved -->
-<span class="absolute -top-10 -right-10 hidden md:block opacity-40 transform rotate-12">
-<span class="material-symbols-outlined text-7xl text-primary" style='font-variation-settings: "FILL" 0, "wght" 200;'>auto_awesome</span>
-</span>
-</h1>
-<p class="font-body text-lg text-on-surface-variant mt-8 max-w-xl leading-relaxed opacity-80" style="">I’m currently open to opportunities in content marketing, CRM, campaign strategy, and brand growth. If you’d like to discuss a role, collaboration, or project, feel free to reach out.</p>
-</div>
-<!-- Image Accent aligned to right column -->
-<div class="md:col-span-4 mt-8 md:mt-0">
-<div class="w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
-<img alt="Editorial portrait" class="w-full h-full object-cover" data-alt="Soft focused editorial style portrait of a creative professional in a warmly lit archival studio with vintage books and warm textures" src="images/me.jpg" style=""/>
-</div>
-</div>
+  <div class="md:col-span-8">
+    <span class="font-label text-primary uppercase tracking-[0.3em] text-sm mb-4 block italic">CONTACT</span>
+
+    <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.1] tracking-tight max-w-5xl relative">
+      Let’s <span class="italic underline decoration-secondary-fixed">Connect.</span>
+      <span class="absolute -top-10 -right-10 hidden md:block opacity-40 transform rotate-12">
+        <span class="material-symbols-outlined text-7xl text-primary" style='font-variation-settings: "FILL" 0, "wght" 200;'>auto_awesome</span>
+      </span>
+    </h1>
+
+    <p class="font-body text-lg text-on-surface-variant mt-8 max-w-xl leading-relaxed opacity-80">
+      I’m currently open to opportunities in content marketing, CRM, campaign strategy, and brand growth. If you’d like to discuss a role, collaboration, or project, feel free to reach out.
+    </p>
+
+    <!-- 여기로 카드 영역 이동 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+      <!-- Email Card -->
+      <div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
+        <div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">mail</span>
+        </div>
+        <span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4">EMAIL</span>
+        <a class="font-headline text-2xl text-primary block break-words hover:opacity-70 transition-opacity" href="mailto:aerinyun199@gmail.com">
+          aerinyun199@gmail.com
+        </a>
+      </div>
+
+      <!-- Location Card -->
+      <div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
+        <div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">location_on</span>
+        </div>
+        <span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4">LOCATION</span>
+        <p class="font-headline text-2xl text-primary">Toronto, Canada</p>
+      </div>
+
+      <!-- LinkedIn Card -->
+      <div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
+        <div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">share</span>
+        </div>
+        <span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4">LINKEDIN</span>
+        <a class="font-headline text-2xl text-primary block hover:opacity-70 transition-opacity underline decoration-secondary-fixed decoration-4 underline-offset-4" href="#">
+          Miyeong Yun
+        </a>
+      </div>
+
+      <!-- Resume Card -->
+      <div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
+        <div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+          <span class="material-symbols-outlined text-8xl text-primary">description</span>
+        </div>
+        <span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4">RESUME</span>
+        <a class="flex items-center gap-2 font-headline text-2xl text-primary hover:opacity-70 transition-opacity" href="#">
+          Download CV
+          <span class="material-symbols-outlined text-xl">arrow_outward</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CTA Block -->
+    <div class="bg-secondary-fixed p-12 rounded-xl text-center relative max-w-3xl mt-12">
+      <div class="absolute -left-20 top-0 hidden lg:block opacity-10 transform -rotate-12">
+        <span class="material-symbols-outlined text-9xl text-primary" style='font-variation-settings: "FILL" 0, "wght" 100;'>edit_note</span>
+      </div>
+      <p class="font-headline text-2xl md:text-3xl text-primary italic leading-tight">Looking for a content marketer who can turn views into revenue? Let's build something that actually converts.</p>
+      <div class="mt-8 flex justify-center items-center gap-2 text-primary">
+        <span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+        <span class="font-label text-xs uppercase tracking-[0.4em] font-bold">Inquiries Welcome</span>
+        <span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+      </div>
+      <div class="absolute -right-20 -bottom-10 hidden lg:block opacity-10 transform rotate-45">
+        <span class="material-symbols-outlined text-8xl text-primary" style='font-variation-settings: "FILL" 0, "wght" 100;'>draw</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="md:col-span-4 mt-8 md:mt-0">
+    <div class="w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+      <img alt="Editorial portrait" class="w-full h-full object-cover" src="images/me.jpg"/>
+    </div>
+  </div>
 </section>
-<!-- Content Grid (Using narrative layout structure from About) -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-<!-- Left Side / Sidebar style for Cards -->
-<div class="md:col-span-8">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
-<!-- Email Card -->
-<div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
-<div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-8xl text-primary" style="">mail</span>
-</div>
-<span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4" style="">EMAIL</span>
-<a class="font-headline text-2xl text-primary block break-words hover:opacity-70 transition-opacity" href="mailto:aerinyun199@gmail.com" style="">aerinyun199@gmail.com</a>
-</div>
-<!-- Location Card -->
-<div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
-<div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-8xl text-primary" style="">location_on</span>
-</div>
-<span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4" style="">LOCATION</span>
-<p class="font-headline text-2xl text-primary" style="">Toronto, Canada</p>
-</div>
-<!-- LinkedIn Card -->
-<div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
-<div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-8xl text-primary" style="">share</span>
-</div>
-<span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4" style="">LINKEDIN</span>
-<a class="font-headline text-2xl text-primary block hover:opacity-70 transition-opacity underline decoration-secondary-fixed decoration-4 underline-offset-4" href="#" style="">Miyeong Yun</a>
-</div>
-<!-- Resume Card -->
-<div class="group bg-surface-container-low p-10 rounded-xl transition-all duration-500 relative overflow-hidden">
-<div class="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
-<span class="material-symbols-outlined text-8xl text-primary" style="">description</span>
-</div>
-<span class="block font-label text-xs uppercase tracking-widest text-primary-container mb-4" style="">RESUME</span>
-<a class="flex items-center gap-2 font-headline text-2xl text-primary hover:opacity-70 transition-opacity" href="#" style="">
-                            Download CV
-                            <span class="material-symbols-outlined text-xl" style="">arrow_outward</span>
-</a>
-</div>
-</div>
-<!-- CTA Block (Styled similar to About's interactive blocks) -->
-<div class="bg-secondary-fixed p-12 rounded-xl text-center relative max-w-3xl mx-auto">
-<div class="absolute -left-20 top-0 hidden lg:block opacity-10 transform -rotate-12">
-<span class="material-symbols-outlined text-9xl text-primary" style='font-variation-settings: "FILL" 0, "wght" 100;'>edit_note</span>
-</div>
-<p class="font-headline text-2xl md:text-3xl text-primary italic leading-tight" style="">Looking for a content marketer who can turn views into revenue? Let’s build something that actually converts.</p>
-<div class="mt-8 flex justify-center items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
-<span class="font-label text-xs uppercase tracking-[0.4em] font-bold" style="">Inquiries Welcome</span>
-<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
-</div>
-<div class="absolute -right-20 -bottom-10 hidden lg:block opacity-10 transform rotate-45">
-<span class="material-symbols-outlined text-8xl text-primary" style='font-variation-settings: "FILL" 0, "wght" 100;'>draw</span>
-</div>
-</div>
-</div>
-</div>
 </main>
 <!-- Footer (Synced from About Screen) -->
-<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 bg-surface-container rounded-t-xl mt-12">
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 bg-[#f2ede9] rounded-t-xl mt-12">
 <div class="flex flex-col items-center md:items-start gap-2">
 <span class="font-headline italic text-lg text-primary" style="">Miyeong (Aerin) Yun</span>
 <span class="font-body text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60" style="">© 2026 MIYEONG YUN. ALL RIGHTS RESERVED.</span>
@@ -200,4 +238,21 @@
 <div class="fixed top-[20%] right-[-5%] pointer-events-none opacity-[0.03] select-none">
 <span class="material-symbols-outlined text-[40rem] text-primary" style='font-variation-settings: "wght" 100;'>gesture</span>
 </div>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const button = document.querySelector('[aria-controls="mobile-menu"]');
+    const isHidden = menu.classList.contains('hidden');
+
+    menu.classList.toggle('hidden');
+    button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+  }
+
+  function closeMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const button = document.querySelector('[aria-controls="mobile-menu"]');
+    menu.classList.add('hidden');
+    button.setAttribute('aria-expanded', 'false');
+  }
+</script>
 </body></html>
