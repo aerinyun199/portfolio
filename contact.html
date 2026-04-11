@@ -133,8 +133,8 @@
 <!-- Alignment Main Container (Matches About Screen padding and max-width) -->
 <main class="pb-24 px-8 max-w-[1920px] mx-auto min-h-screen pt-32">
 <!-- Hero Section (Aligned to match About Screen header position exactly) -->
-<section class="mb-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-  <div class="md:col-span-8">
+<section class="mb-20 flex flex-col md:grid md:grid-cols-12 gap-8 md:items-start">
+  <div class="md:col-span-8 flex flex-col">
     <span class="font-label text-primary uppercase tracking-[0.3em] text-sm mb-4 block italic">CONTACT</span>
 
     <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-primary leading-[1.1] tracking-tight max-w-5xl relative">
@@ -147,7 +147,12 @@
     <p class="font-body text-lg text-on-surface-variant mt-8 max-w-xl leading-relaxed opacity-80">
       I’m currently open to opportunities in content marketing, CRM, campaign strategy, and brand growth. If you’d like to discuss a role, collaboration, or project, feel free to reach out.
     </p>
-
+    <!-- Image on Mobile (appears after paragraph) -->
+    <div class="md:hidden w-full mt-8">
+      <div class="w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+        <img alt="Editorial portrait" class="w-full h-full object-cover" src="images/me.jpg"/>
+      </div>
+    </div>
     <!-- 여기로 카드 영역 이동 -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
       <!-- Email Card -->
@@ -211,7 +216,7 @@
     </div>
   </div>
 
-  <div class="md:col-span-4 mt-8 md:mt-0">
+  <div class="hidden md:block md:col-span-4 mt-8 md:mt-0">
     <div class="w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
       <img alt="Editorial portrait" class="w-full h-full object-cover" src="images/me.jpg"/>
     </div>
